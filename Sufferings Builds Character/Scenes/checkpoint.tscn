@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://e2htt6rr714m"]
+
+[ext_resource type="Texture2D" uid="uid://bi5cse7d4spxa" path="res://Example Assets/icon.webp" id="1_iyy3n"]
+[ext_resource type="Script" path="res://Sufferings Builds Character/Scripts/checkpoint.gd" id="2_uu63q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kq3f"]
+size = Vector2(128, 128)
+
+[node name="checkpoint" type="Sprite2D"]
+texture = ExtResource("1_iyy3n")
+script = ExtResource("2_uu63q")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_1kq3f")
